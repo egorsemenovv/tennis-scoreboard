@@ -1,4 +1,4 @@
-package org.egorsemenovv.tennisscoreboard.entity;
+package org.egorsemenovv.tennisscoreboard.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,20 +16,21 @@ public class Match {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE},optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE}, optional = false)
     @JoinColumn(name = "player1")
     private Player player1;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE},optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE}, optional = false)
     @JoinColumn(name = "player2")
     private Player player2;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE},optional = true)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.REMOVE}, optional = false)
     @JoinColumn(name = "winner")
     private Player winner;
 
+    @Builder.Default
     @Transient
-    private MatchScore matchScore;
+    private MatchScore matchScore = new MatchScore();
 }
 
 

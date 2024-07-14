@@ -1,10 +1,7 @@
-package org.egorsemenovv.tennisscoreboard.entity;
+package org.egorsemenovv.tennisscoreboard.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -22,7 +19,4 @@ public class Player {
     @Column(unique = true)
     private String name;
 
-    @Builder.Default
-    @OneToMany(mappedBy = "firstPlayer")
-    private Set<Match> matches = new HashSet<>();
 }
