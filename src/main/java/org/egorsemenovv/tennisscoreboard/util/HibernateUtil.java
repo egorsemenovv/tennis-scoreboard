@@ -1,4 +1,4 @@
-package util;
+package org.egorsemenovv.tennisscoreboard.util;
 
 import lombok.experimental.UtilityClass;
 import org.egorsemenovv.tennisscoreboard.exception.NoSuchResourceException;

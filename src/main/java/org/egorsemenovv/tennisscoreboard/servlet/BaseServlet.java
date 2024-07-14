@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.egorsemenovv.tennisscoreboard.exception.InvalidParamsException;
 import org.egorsemenovv.tennisscoreboard.exception.NoSuchResourceException;
 import org.egorsemenovv.tennisscoreboard.exception.RepositoryException;
-import util.ExceptionHandler;
+import org.egorsemenovv.tennisscoreboard.util.ExceptionHandler;
 
 import java.io.IOException;
 

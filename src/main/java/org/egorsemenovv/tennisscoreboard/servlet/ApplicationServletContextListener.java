@@ -5,7 +5,7 @@ import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import org.egorsemenovv.tennisscoreboard.exception.NoSuchResourceException;
 import org.egorsemenovv.tennisscoreboard.exception.RepositoryException;
-import util.HibernateUtil;
+import org.egorsemenovv.tennisscoreboard.util.HibernateUtil;
 
 @WebListener
 public class ApplicationServletContextListener implements ServletContextListener {

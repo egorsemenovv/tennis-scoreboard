@@ -1,4 +1,4 @@
-package util;
+package org.egorsemenovv.tennisscoreboard.util;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

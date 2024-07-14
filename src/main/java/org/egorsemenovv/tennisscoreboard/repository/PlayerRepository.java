@@ -5,7 +5,7 @@ import org.egorsemenovv.tennisscoreboard.exception.RepositoryException;
 import org.egorsemenovv.tennisscoreboard.model.Player;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
-import util.HibernateUtil;
+import org.egorsemenovv.tennisscoreboard.util.HibernateUtil;
 import java.util.Optional;
 
 public class PlayerRepository implements Repository<Integer, Player> {
