@@ -2,16 +2,16 @@ package org.egorsemenovv.tennisscoreboard.service;
 
 import lombok.Getter;
 import org.egorsemenovv.tennisscoreboard.model.Match;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class OngoingMatchesService {
 
     @Getter
     private static final OngoingMatchesService INSTANCE = new OngoingMatchesService();
-    private final Map<String, Match> onGoingMatches = new HashMap<>();
+    private final Map<String, Match> onGoingMatches = new ConcurrentHashMap<>();
 
     private OngoingMatchesService(){}
 
